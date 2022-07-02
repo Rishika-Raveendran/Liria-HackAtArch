@@ -4,6 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:liria/ppd.dart';
 
+import 'package:liria/pcos.dart';
+import 'package:liria/sexedctn.dart';
+import 'package:liria/tracker.dart';
+
+import 'groups.dart';
+
 class Health extends StatefulWidget {
   const Health({Key? key}) : super(key: key);
 
@@ -51,6 +57,8 @@ class _HealthState extends State<Health> {
             InkWell(
               onTap: () {
                 print("Cycle");
+                Get.to(const Tracker());
+
               },
               child: Container(
                 padding: const EdgeInsets.only(
@@ -108,6 +116,7 @@ class _HealthState extends State<Health> {
             InkWell(
               onTap: () {
                 print("PPD");
+                Get.to(const PCOSScreen());
               },
               child: Container(
                   padding: const EdgeInsets.only(
@@ -127,6 +136,7 @@ class _HealthState extends State<Health> {
             InkWell(
               onTap: () {
                 print("PPD");
+                Get.to(const SexEdScreen());
               },
               child: Container(
                   padding: const EdgeInsets.only(
@@ -146,6 +156,7 @@ class _HealthState extends State<Health> {
             InkWell(
               onTap: () {
                 print("PPD");
+                Get.to(const Groups());
               },
               child: Container(
                   padding: const EdgeInsets.only(

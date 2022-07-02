@@ -33,14 +33,17 @@ class _SplashScreenState extends State<SplashScreen> {
       Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          const SizedBox(height: 380),
           Container(
-            color: Colors.white.withOpacity(0.6),
+            color: Colors.white.withOpacity(0.0),
             height: 200,
             alignment: Alignment.center,
-            child: const Image(
-              image: AssetImage("images/logo.png"),
-              fit: BoxFit.cover,
-            ),
+            child: const Text("LIRIA",
+                style: TextStyle(
+                    fontSize: 35,
+                    color: Color.fromRGBO(81, 81, 81, 1),
+                    fontWeight: FontWeight.w700,
+                    fontStyle: FontStyle.italic)),
           ),
         ],
       ),
