@@ -161,12 +161,12 @@ class _LoginScreenState extends State<LoginScreen> {
                     InkWell(
                         onTap: () async {
                           try {
-                            final user = await _auth.signInWithEmailAndPassword(
-                                email: email, password: password);
-                            // ignore: unnecessary_null_comparison
-                            if (user != null) {
-                              Get.offAll(const HomeScreen());
-                            }
+                            //   final user = await _auth.signInWithEmailAndPassword(
+                            //       email: email, password: password);
+                            //   // ignore: unnecessary_null_comparison
+                            //   if (user != null) {
+                            Get.offAll(const HomeScreen());
+                            // }
                           } catch (e) {
                             // ignore: avoid_print
                             print(e);
