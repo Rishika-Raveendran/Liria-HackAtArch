@@ -4,7 +4,9 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 // import 'home.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:liria/health.dart';
 import 'package:liria/home.dart';
+import 'package:liria/tracker.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -165,7 +167,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             //       email: email, password: password);
                             //   // ignore: unnecessary_null_comparison
                             //   if (user != null) {
-                            Get.offAll(const HomeScreen());
+                            Get.offAll(const Health());
                             // }
                           } catch (e) {
                             // ignore: avoid_print
