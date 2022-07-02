@@ -187,7 +187,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             //       email: email, password: password);
                             //   // ignore: unnecessary_null_comparison
                             //   if (user != null) {
-                            Get.offAll(const Health());
+                            Get.offAll(const HomeScreen());
                             // }
                           } catch (e) {
                             // ignore: avoid_print
