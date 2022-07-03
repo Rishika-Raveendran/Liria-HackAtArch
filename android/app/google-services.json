@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "954346015573",
+    "project_id": "liria-23b54",
+    "storage_bucket": "liria-23b54.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:954346015573:android:eab87655b374bfa55e7ddc",
+        "android_client_info": {
+          "package_name": "com.example.liria"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "954346015573-g8e543k8mi61gtsv4bvmd9ard1dqb095.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.liria",
+            "certificate_hash": "da75b527cb1ff47c491b7824c1eb6ff0d24421b8"
+          }
+        },
+        {
+          "client_id": "954346015573-80gjul7gi4cbpa6s0fhusgq6ahvdkn0p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvEMJNkysgbzqCApJ-vghT1KN75YtqaVg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "954346015573-80gjul7gi4cbpa6s0fhusgq6ahvdkn0p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
