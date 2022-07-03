@@ -196,7 +196,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         },
                       ), */
                       InkWell(
-                          onTap: () => {Get.offAll(const Health())},
+                          onTap: () => {Get.offAll(const HomeScreen())},
                           child: Container(
                               width: 270,
                               height: 50,
