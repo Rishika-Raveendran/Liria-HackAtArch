@@ -51,7 +51,7 @@ class _TrackerState extends State<Tracker> {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("images/background.jpg"),
+            image: AssetImage("images/saf3.jpg"),
             fit: BoxFit.cover,
           ),
         ),
@@ -66,7 +66,7 @@ class _TrackerState extends State<Tracker> {
                 const Text(
                   "1. When did your last period start?",
                   textAlign: TextAlign.left,
-                  style: TextStyle(color: Colors.white, fontSize: 20),
+                  style: TextStyle(color: Colors.black, fontSize: 20),
                 ),
                 const SizedBox(
                   height: 20,
@@ -88,13 +88,13 @@ class _TrackerState extends State<Tracker> {
                     }
                   },
                   calendarStyle: const CalendarStyle(
-                      defaultTextStyle: TextStyle(color: Colors.white),
-                      outsideTextStyle: TextStyle(color: Colors.white),
-                      weekendTextStyle: TextStyle(color: Colors.white60)),
+                      defaultTextStyle: TextStyle(color: Colors.black),
+                      outsideTextStyle: TextStyle(color: Colors.black),
+                      weekendTextStyle: TextStyle(color: Colors.black)),
                   headerStyle: HeaderStyle(
                       // leftChevronIcon: Icon(color:Colors.white),
                       titleCentered: true,
-                      titleTextStyle: const TextStyle(color: Colors.white),
+                      titleTextStyle: const TextStyle(color: Colors.black),
                       leftChevronIcon: const Icon(
                         Icons.chevron_left,
                         color: Colors.white60,
@@ -107,7 +107,7 @@ class _TrackerState extends State<Tracker> {
                           color: Colors.teal[400],
                           borderRadius: BorderRadius.circular(15)),
                       formatButtonTextStyle:
-                          const TextStyle(color: Colors.white)),
+                          const TextStyle(color: Colors.black)),
                 ),
 
                 const SizedBox(
@@ -116,7 +116,7 @@ class _TrackerState extends State<Tracker> {
                 const Text(
                   "2. How many days did your last period last?",
                   textAlign: TextAlign.left,
-                  style: TextStyle(color: Colors.white, fontSize: 20),
+                  style: TextStyle(color: Colors.black, fontSize: 20),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -127,7 +127,7 @@ class _TrackerState extends State<Tracker> {
                           size: 20,
                         ),
                         onPressed: decrementDate,
-                        color: Colors.white),
+                        color: Colors.black),
                     Text(
                       "$date",
                       style: TextStyle(
@@ -142,7 +142,7 @@ class _TrackerState extends State<Tracker> {
                         size: 20,
                       ),
                       onPressed: incrementDate,
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
                   ],
                 ),
@@ -154,7 +154,7 @@ class _TrackerState extends State<Tracker> {
                 Text(
                   "3. How long is your menstrual cycle?",
                   textAlign: TextAlign.left,
-                  style: TextStyle(color: Colors.white, fontSize: 20),
+                  style: TextStyle(color: Colors.black, fontSize: 20),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -165,7 +165,7 @@ class _TrackerState extends State<Tracker> {
                           size: 20,
                         ),
                         onPressed: decrementLength,
-                        color: Colors.white),
+                        color: Colors.black),
                     Text(
                       "$length",
                       style: TextStyle(
@@ -180,7 +180,7 @@ class _TrackerState extends State<Tracker> {
                         size: 20,
                       ),
                       onPressed: incrementLength,
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
                   ],
                 ),
@@ -198,7 +198,7 @@ class _TrackerState extends State<Tracker> {
                   color: Colors.teal[400],
                   child: const Text(
                     "Track Now",
-                    style: TextStyle(fontSize: 20, color: Colors.white),
+                    style: TextStyle(fontSize: 20, color: Colors.black),
                   ),
                 )
               ],
