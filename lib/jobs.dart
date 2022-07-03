@@ -10,14 +10,14 @@ import 'package:liria/tracker.dart';
 
 import 'groups.dart';
 
-class Health extends StatefulWidget {
-  const Health({Key? key}) : super(key: key);
+class Jobs extends StatefulWidget {
+  const Jobs({Key? key}) : super(key: key);
 
   @override
-  State<Health> createState() => _HealthState();
+  State<Jobs> createState() => _JobsState();
 }
 
-class _HealthState extends State<Health> {
+class _JobsState extends State<Jobs> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,7 +35,7 @@ class _HealthState extends State<Health> {
               icon: const Icon(Icons.arrow_back,
                   color: Color.fromRGBO(161, 218, 167, 1)),
             ),
-            const Text('HEALTH',
+            const Text('JOBS',
                 style: TextStyle(fontSize: 16, color: Colors.black)),
             IconButton(
               onPressed: () => Navigator.pop(context),
@@ -78,15 +78,7 @@ class _HealthState extends State<Health> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text("KNOW YOUR CYCLE",
-                        style: TextStyle(fontSize: 16)),
-                    IconButton(
-                        onPressed: () {},
-                        icon: const Icon(
-                          Icons.calendar_today_outlined,
-                          size: 40,
-                          color: Color.fromRGBO(126, 115, 246, 1),
-                        ))
+                    const Text("WORK WITH US", style: TextStyle(fontSize: 16)),
                   ],
                 ),
               ),
@@ -94,7 +86,7 @@ class _HealthState extends State<Health> {
             InkWell(
               onTap: () {
                 print("PPD");
-                Get.to(const PPDScreen());
+                // Get.to(const PPDScreen());
               },
               child: Container(
                   padding: const EdgeInsets.only(
@@ -108,14 +100,34 @@ class _HealthState extends State<Health> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
-                        Text("POSTPARTUM DEPRESSION",
+                        Text("Content creator", style: TextStyle(fontSize: 16)),
+                      ])),
+            ),
+            InkWell(
+              onTap: () {
+                print("PPD");
+                // Get.to(const PCOSScreen());
+              },
+              child: Container(
+                  padding: const EdgeInsets.only(
+                      top: 30, left: 20, bottom: 30, right: 20),
+                  margin: const EdgeInsets.only(
+                      top: 10, left: 20, bottom: 10, right: 20),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: const Color.fromRGBO(191, 234, 212, 1)),
+                  child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Text("Social Media Manager",
                             style: TextStyle(fontSize: 16)),
                       ])),
             ),
             InkWell(
               onTap: () {
                 print("PPD");
-                Get.to(const PCOSScreen());
+                // Get.to(const SexEdScreen());
               },
               child: Container(
                   padding: const EdgeInsets.only(
@@ -129,27 +141,8 @@ class _HealthState extends State<Health> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
-                        Text("PCOS", style: TextStyle(fontSize: 16)),
-                      ])),
-            ),
-            InkWell(
-              onTap: () {
-                print("PPD");
-                Get.to(const SexEdScreen());
-              },
-              child: Container(
-                  padding: const EdgeInsets.only(
-                      top: 30, left: 20, bottom: 30, right: 20),
-                  margin: const EdgeInsets.only(
-                      top: 10, left: 20, bottom: 10, right: 20),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: const Color.fromRGBO(191, 234, 212, 1)),
-                  child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
-                        Text("SEX EDUCATION", style: TextStyle(fontSize: 16)),
+                        Text("Website administration",
+                            style: TextStyle(fontSize: 16)),
                       ])),
             ),
             InkWell(
@@ -169,7 +162,8 @@ class _HealthState extends State<Health> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
-                        Text("GYNAEC ISSUES", style: TextStyle(fontSize: 16)),
+                        Text("Health professionals",
+                            style: TextStyle(fontSize: 16)),
                       ])),
             ),
           ],

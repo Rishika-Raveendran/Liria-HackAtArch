@@ -57,7 +57,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       backgroundImage: NetworkImage(userAvatarUrl),
                       radius: 70))),
           getContainer("Name: Username", context),
-          getContainer("KTU Roll No : TCR00CS000", context),
           getContainer("Email : abc@example.com", context),
           getContainer("Phone : +91 9557824001", context),
         ],

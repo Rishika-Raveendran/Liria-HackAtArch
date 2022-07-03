@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:liria/blog.dart';
 import 'package:liria/double_tap.dart';
 import 'package:liria/health.dart';
+import 'package:liria/jobs.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({Key? key}) : super(key: key);
@@ -128,7 +130,9 @@ class _DashboardState extends State<Dashboard> {
                               children: [
                                 Container(
                                   child: IconButton(
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        Get.to(const DiscussionForum());
+                                      },
                                       icon: const Icon(
                                         Icons.forum,
                                         size: 60,
@@ -200,7 +204,9 @@ class _DashboardState extends State<Dashboard> {
                                 children: [
                                   Container(
                                     child: IconButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          Get.to(const Jobs());
+                                        },
                                         icon: const Icon(
                                           Icons.person,
                                           size: 60,
