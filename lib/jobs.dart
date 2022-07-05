@@ -57,7 +57,7 @@ class _JobsState extends State<Jobs> {
             InkWell(
               onTap: () {
                 print("Cycle");
-                Get.to(const Tracker());
+                // Get.to(const Tracker());
               },
               child: Container(
                 padding: const EdgeInsets.only(
