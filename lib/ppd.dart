@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class PPDScreen extends StatefulWidget {
@@ -43,6 +44,8 @@ class _PPDScreenState extends State<PPDScreen> {
         ),
       ),
       body: Center(
+        child: SingleChildScrollView(
+
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -155,6 +158,32 @@ class _PPDScreenState extends State<PPDScreen> {
             ),
           ],
         ),
+      ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.notification_important),
+            label: 'Notification',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.help),
+            label: 'Help',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Profile',
+          ),
+        ],
+        // currentIndex: _selectedIndex,
+        unselectedItemColor: Colors.teal,
+        selectedItemColor: Colors.blue[900],
+        backgroundColor: const Color.fromRGBO(237, 255, 242, 1),
+        // onTap: _onItemTapped,
       ),
     );
   }

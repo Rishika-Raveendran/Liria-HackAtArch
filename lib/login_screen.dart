@@ -79,10 +79,11 @@ class _LoginScreenState extends State<LoginScreen> {
                                     color: Colors.white),
                                 SizedBox(width: 10),
                                 Text("Continue with Facebook",
-                                    style: TextStyle(color: Colors.white))
+                                    style: TextStyle(color: Colors.black))
                               ]),
                           decoration: BoxDecoration(
-                              color: const Color.fromRGBO(70, 71, 221, 1),
+                              color:
+                              const Color.fromRGBO(117, 117, 117, 0.90),
                               borderRadius: BorderRadius.circular(20))),
                     ),
                     InkWell(
@@ -99,16 +100,22 @@ class _LoginScreenState extends State<LoginScreen> {
                                     color: Colors.white),
                                 SizedBox(width: 15),
                                 Text("Continue with Google",
-                                    style: TextStyle(color: Colors.white))
+                                    style: TextStyle(color: Colors.black))
                               ]),
                           decoration: BoxDecoration(
-                              color: const Color.fromRGBO(70, 71, 221, 1),
+                            // ignore: prefer_const_constructors
+                              color:
+                              const Color.fromRGBO(117, 117, 117, 0.90),
                               borderRadius: BorderRadius.circular(20))),
                     ),
                     const SizedBox(height: 30),
-                    const Text("OR LOGIN WITH PASSWORD",
+                    const Text("OR",
                         style:
-                            TextStyle(color: Color.fromRGBO(161, 164, 178, 1))),
+                        TextStyle(color: Color.fromRGBO(51, 51, 51, 1))),
+                    const SizedBox(height: 20),
+                    const Text("Continue with credentials",
+                        style:
+                        TextStyle(color: Color.fromRGBO(51, 51, 51, 1))),
                     Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(40),
@@ -166,24 +173,28 @@ class _LoginScreenState extends State<LoginScreen> {
                     const SizedBox(height: 40),
                     InkWell(
                         onTap: () async {
-                          try {
-                            final user = await _auth.signInWithEmailAndPassword(
-                                email: email, password: password);
-                            if (user != null) {
+                          // try {
+                          //   final user = await _auth.signInWithEmailAndPassword(
+                          //       email: email, password: password);
+                          //   if (user != null) {
                               Get.to(const HomeScreen());
-                            }
-                          } catch (e) {
-                            print(e);
-                          }
+                          //   }
+                          // } catch (e) {
+                          //   print(e);
+                          // }
                         },
                         child: Container(
                             width: 270,
                             height: 50,
                             child: const Align(
                                 alignment: Alignment(0, 0),
-                                child: Text("Login")),
+                              child: Text("Login",
+                                  style: TextStyle(
+                                      color:
+                                      Color.fromRGBO(242, 236, 236, 1))),
+                            ),
                             decoration: BoxDecoration(
-                                color: const Color.fromRGBO(70, 71, 221, 1),
+                                color: const Color.fromRGBO(19, 61, 28, 1),
                                 borderRadius: BorderRadius.circular(20))))
                   ]))
         ],
