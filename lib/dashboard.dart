@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:liria/blog.dart';
 import 'package:liria/double_tap.dart';
 import 'package:liria/health.dart';
-import 'package:liria/jobs.dart';
+
 
 class Dashboard extends StatefulWidget {
   const Dashboard({Key? key}) : super(key: key);
@@ -24,8 +24,8 @@ class _DashboardState extends State<Dashboard> {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            const Text('HOME',
+          children: const <Widget>[
+            Text('HOME',
                 style: TextStyle(fontSize: 16, color: Colors.black)),
 
             // Your widgets here
@@ -34,7 +34,7 @@ class _DashboardState extends State<Dashboard> {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Row(
@@ -61,7 +61,7 @@ class _DashboardState extends State<Dashboard> {
                                           size: 60,
                                         )),
                                     height:
-                                        MediaQuery.of(context).size.height / 7,
+                                        MediaQuery.of(context).size.height / 5,
                                     width:
                                         MediaQuery.of(context).size.width / 2,
                                     decoration: const BoxDecoration(
@@ -97,7 +97,7 @@ class _DashboardState extends State<Dashboard> {
                                         size: 60,
                                       )),
                                   height:
-                                      MediaQuery.of(context).size.height / 7,
+                                      MediaQuery.of(context).size.height / 5,
                                   width: MediaQuery.of(context).size.width / 2,
                                   decoration: const BoxDecoration(
                                       color: Color.fromRGBO(237, 255, 242, 1),
@@ -138,7 +138,7 @@ class _DashboardState extends State<Dashboard> {
                                         size: 60,
                                       )),
                                   height:
-                                      MediaQuery.of(context).size.height / 7,
+                                      MediaQuery.of(context).size.height / 5,
                                   width: MediaQuery.of(context).size.width / 2,
                                   decoration: const BoxDecoration(
                                       color: Color.fromRGBO(237, 255, 242, 1),
@@ -160,84 +160,11 @@ class _DashboardState extends State<Dashboard> {
                                 )
                               ],
                             ),
-                            Column(
-                              children: [
-                                Container(
-                                  child: IconButton(
-                                      onPressed: () {},
-                                      icon: const Icon(
-                                        Icons.group,
-                                        size: 60,
-                                      )),
-                                  height:
-                                      MediaQuery.of(context).size.height / 7,
-                                  width: MediaQuery.of(context).size.width / 2,
-                                  decoration: const BoxDecoration(
-                                      color: Color.fromRGBO(237, 255, 242, 1),
-                                      shape: BoxShape.circle,
-                                      boxShadow: [
-                                        // ignore: prefer_const_constructors
-                                        BoxShadow(
-                                          color: Colors.black38,
-                                          blurRadius: 10.0,
-                                        ),
-                                      ]),
-                                ),
-                                const SizedBox(
-                                  height: 20,
-                                ),
-                                const Text(
-                                  "Interest groups",
-                                  style: TextStyle(fontWeight: FontWeight.bold),
-                                )
-                              ],
-                            ),
+
                           ],
                         ),
                       ),
-                      Container(
-                        margin: const EdgeInsets.only(top: 60),
-                        child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Column(
-                                children: [
-                                  Container(
-                                    child: IconButton(
-                                        onPressed: () {
-                                          Get.to(const Jobs());
-                                        },
-                                        icon: const Icon(
-                                          Icons.person,
-                                          size: 60,
-                                        )),
-                                    height:
-                                        MediaQuery.of(context).size.height / 7,
-                                    width:
-                                        MediaQuery.of(context).size.width / 2,
-                                    decoration: const BoxDecoration(
-                                        color: Color.fromRGBO(237, 255, 242, 1),
-                                        shape: BoxShape.circle,
-                                        boxShadow: [
-                                          // ignore: prefer_const_constructors
-                                          BoxShadow(
-                                            color: Colors.black38,
-                                            blurRadius: 10.0,
-                                          ),
-                                        ]),
-                                  ),
-                                  const SizedBox(
-                                    height: 20,
-                                  ),
-                                  const Text(
-                                    "Jobs",
-                                    style:
-                                        TextStyle(fontWeight: FontWeight.bold),
-                                  )
-                                ],
-                              ),
-                            ]),
-                      )
+
                     ],
                   )
                 ]),

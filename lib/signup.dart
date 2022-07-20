@@ -6,21 +6,22 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 // import 'home.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:liria/dashboard.dart';
 import 'package:liria/health.dart';
 import 'package:liria/home.dart';
-import 'package:liria/signup.dart';
+import 'package:liria/login_screen.dart';
 import 'package:liria/tracker.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+class SignupScreen extends StatefulWidget {
+  const SignupScreen({Key? key}) : super(key: key);
 
   @override
-  _LoginScreenState createState() => _LoginScreenState();
+  _SignupScreenState createState() => _SignupScreenState();
 }
 
 final _auth = FirebaseAuth.instance;
 
-class _LoginScreenState extends State<LoginScreen> {
+class _SignupScreenState extends State<SignupScreen> {
   String email = "";
   String password = "";
   bool _checkbox = false;
@@ -52,7 +53,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     InkWell(
-                      onTap: () => Get.offAll(const SignupScreen()),
+                      onTap: () => Get.offAll(const LoginScreen()),
                       child: Container(
                           margin: const EdgeInsets.only(top: 10),
                           decoration: BoxDecoration(
@@ -62,7 +63,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           height: 50,
                           child: const Align(
                               alignment: Alignment(0, 0),
-                              child: Text("Create an Account",
+                              child: Text("Already a user? Log in",
                                   style: TextStyle(color: Colors.white)))),
                     ),
                     InkWell(
@@ -79,7 +80,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 FaIcon(FontAwesomeIcons.facebook,
                                     color: Colors.white),
                                 SizedBox(width: 10),
-                                Text("Continue with Facebook",
+                                Text("Sign in with Facebook",
                                     style: TextStyle(color: Colors.black))
                               ]),
                           decoration: BoxDecoration(
@@ -99,7 +100,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 FaIcon(FontAwesomeIcons.google,
                                     color: Colors.white),
                                 SizedBox(width: 15),
-                                Text("Continue with Google",
+                                Text("Sign in with Google",
                                     style: TextStyle(color: Colors.black))
                               ]),
                           decoration: BoxDecoration(
@@ -111,7 +112,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     const Text("OR",
                         style: TextStyle(color: Color.fromRGBO(51, 51, 51, 1))),
                     const SizedBox(height: 20),
-                    const Text("Continue with credentials",
+                    const Text("Sign in with credentials",
                         style: TextStyle(color: Color.fromRGBO(51, 51, 51, 1))),
                     Container(
                       decoration: BoxDecoration(
@@ -150,14 +151,32 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                           obscureText: true,
                         )),
+                    Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                      const InkWell(
+                          child: Text("I have read the Privacy Policy",
+                              style: TextStyle(color: Colors.blue))),
+                      Theme(
+                          data: ThemeData(unselectedWidgetColor: Colors.white),
+                          child: Checkbox(
+                            value: _checkbox,
+                            onChanged: (value) {
+                              setState(() {
+                                _checkbox = !_checkbox;
+                              });
+                            },
+                            activeColor: Colors.white,
+                            checkColor: Colors.blue,
+                          ))
+                    ]),
                     const SizedBox(height: 40),
                     InkWell(
                         onTap: () async {
                           try {
-                            final user = await _auth.signInWithEmailAndPassword(
-                                email: email, password: password);
-                            if (user != null) {
-                              Get.to(const HomeScreen());
+                            final newUser =
+                                await _auth.createUserWithEmailAndPassword(
+                                    email: email, password: password);
+                            if (newUser != null) {
+                              Get.offAll(const Dashboard());
                             }
                           } catch (e) {
                             print(e);
@@ -168,7 +187,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             height: 50,
                             child: const Align(
                               alignment: Alignment(0, 0),
-                              child: Text("Login",
+                              child: Text("Sign in",
                                   style: TextStyle(
                                       color: Color.fromRGBO(242, 236, 236, 1))),
                             ),

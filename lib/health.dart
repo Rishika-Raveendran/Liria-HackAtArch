@@ -8,7 +8,6 @@ import 'package:liria/pcos.dart';
 import 'package:liria/sexedctn.dart';
 import 'package:liria/tracker.dart';
 
-import 'groups.dart';
 
 class Health extends StatefulWidget {
   const Health({Key? key}) : super(key: key);
