@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:jiffy/jiffy.dart';
+import 'package:liria/profile.dart';
+
+import 'dashboard.dart';
 
 class NotificationScreen extends StatefulWidget {
   const NotificationScreen({Key? key}) : super(key: key);
@@ -52,6 +57,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
     return Scaffold(
         backgroundColor: const Color.fromRGBO(237, 255, 242, 1),
         body: Center(
+        child: SingleChildScrollView(
           child: Container(
               padding: EdgeInsets.only(
                   bottom: 20,
@@ -100,7 +106,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                                       color: Colors.teal.withOpacity(0.25),
                                       spreadRadius: 0.25,
                                       blurRadius: 4,
-                                      offset: Offset(
+                                      offset: const Offset(
                                           0, 3), // changes position of shadow
                                     ),
                                   ],
@@ -108,6 +114,45 @@ class _NotificationScreenState extends State<NotificationScreen> {
                           }),
                     )
                   ])),
-        ));
+        ),),
+      bottomNavigationBar: BottomAppBar(
+        color:  const Color.fromRGBO(237, 255, 242, 1),
+        child: Container(
+          margin: const EdgeInsets.only(top: 20,bottom: 20,left: 20,right: 20),
+          height: 50.0,
+          width: double.maxFinite,
+          decoration: BoxDecoration(
+            color: const Color.fromRGBO(191, 234, 212, 1),
+            borderRadius: BorderRadius.circular(100),
+          ),
+          child: Row(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              // ignore: prefer_const_constructors
+              IconButton(
+                icon: const Icon(Icons.home),
+                onPressed: () {
+                  Get.to(const Dashboard());
+                },
+              ),
+              // ignore: prefer_const_constructors
+              IconButton(
+                icon: const Icon(Icons.notification_important),
+                onPressed: () {
+                  Get.to(const NotificationScreen());
+                },
+              ),
+
+              IconButton(
+                icon: const Icon(Icons.person),
+                onPressed: () {
+                  Get.to(const ProfileScreen());
+                },
+              ),
+            ],
+          ),
+        ),
+      ),);
   }
 }
