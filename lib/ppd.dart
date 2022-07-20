@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:liria/dashboard.dart';
+import 'package:liria/notifications.dart';
+import 'package:liria/profile.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class PPDScreen extends StatefulWidget {
@@ -45,145 +48,159 @@ class _PPDScreenState extends State<PPDScreen> {
       ),
       body: Center(
         child: SingleChildScrollView(
-
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            // ignore: avoid_unnecessary_containers
-            Container(
-              child: YoutubePlayer(
-                controller: _controller,
-                liveUIColor: Colors.amber,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              // ignore: avoid_unnecessary_containers
+              Container(
+                child: YoutubePlayer(
+                  controller: _controller,
+                  liveUIColor: Colors.amber,
+                ),
               ),
-            ),
-            // ignore: prefer_const_constructors
-            Container(
-              margin: const EdgeInsets.only(
-                  top: 20, bottom: 15, left: 20, right: 20),
-              child: const Text(
-                  "Postpartum depression (PPD) is a complex mix of physical, emotional, and behavioral changes that happen in some women after giving birth."),
-            ),
-
-            const Align(
-              alignment: Alignment(-0.7, 0),
-              child: Text('SYMPTOMS',
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-            ),
-            Container(
-              margin: const EdgeInsets.only(
-                  top: 20, bottom: 15, left: 20, right: 20),
-              child: const Text("Severe fatigue"),
-            ),
-            Container(
-              margin: const EdgeInsets.only(
-                  top: 20, bottom: 15, left: 20, right: 20),
-              child: const Text("Frequent Mood Changes"),
-            ),
-            Container(
+              // ignore: prefer_const_constructors
+              Container(
                 margin: const EdgeInsets.only(
                     top: 20, bottom: 15, left: 20, right: 20),
-                child: const Text("Trouble sleeping")),
+                child: const Text(
+                    "Postpartum depression (PPD) is a complex mix of physical, emotional, and behavioral changes that happen in some women after giving birth."),
+              ),
 
-            InkWell(
-              onTap: () {
-                print("Cycle");
-              },
-              child: Container(
-                padding: const EdgeInsets.only(
-                    top: 10, left: 20, bottom: 10, right: 20),
+              const Align(
+                alignment: Alignment(-0.7, 0),
+                child: Text('SYMPTOMS',
+                    style:
+                        TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+              ),
+              Container(
                 margin: const EdgeInsets.only(
-                    top: 20, left: 20, bottom: 10, right: 20),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    gradient: const LinearGradient(
-                      colors: [
-                        Color.fromRGBO(46, 30, 253, 0.22),
-                        Color.fromRGBO(232, 251, 255, 1)
-                      ],
-                      begin: Alignment.bottomLeft,
-                      end: Alignment.topRight,
-                    )),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Text("QUERIES", style: TextStyle(fontSize: 16)),
-                    IconButton(
-                        onPressed: () {},
-                        icon: const Icon(
-                          Icons.chevron_right,
-                          size: 40,
-                          color: Color.fromRGBO(126, 115, 246, 1),
-                        ))
-                  ],
+                    top: 20, bottom: 15, left: 20, right: 20),
+                child: const Text("Severe fatigue"),
+              ),
+              Container(
+                margin: const EdgeInsets.only(
+                    top: 20, bottom: 15, left: 20, right: 20),
+                child: const Text("Frequent Mood Changes"),
+              ),
+              Container(
+                  margin: const EdgeInsets.only(
+                      top: 20, bottom: 15, left: 20, right: 20),
+                  child: const Text("Trouble sleeping")),
+
+              InkWell(
+                onTap: () {
+                  print("Cycle");
+                },
+                child: Container(
+                  padding: const EdgeInsets.only(
+                      top: 10, left: 20, bottom: 10, right: 20),
+                  margin: const EdgeInsets.only(
+                      top: 20, left: 20, bottom: 10, right: 20),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      gradient: const LinearGradient(
+                        colors: [
+                          Color.fromRGBO(46, 30, 253, 0.22),
+                          Color.fromRGBO(232, 251, 255, 1)
+                        ],
+                        begin: Alignment.bottomLeft,
+                        end: Alignment.topRight,
+                      )),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text("QUERIES", style: TextStyle(fontSize: 16)),
+                      IconButton(
+                          onPressed: () {},
+                          icon: const Icon(
+                            Icons.chevron_right,
+                            size: 40,
+                            color: Color.fromRGBO(126, 115, 246, 1),
+                          ))
+                    ],
+                  ),
                 ),
               ),
-            ),
-            InkWell(
-              onTap: () {
-                print("Cycle");
-              },
-              child: Container(
-                padding: const EdgeInsets.only(
-                    top: 10, left: 20, bottom: 10, right: 20),
-                margin: const EdgeInsets.only(
-                    top: 20, left: 20, bottom: 10, right: 20),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    gradient: const LinearGradient(
-                      colors: [
-                        Color.fromRGBO(46, 30, 253, 0.22),
-                        Color.fromRGBO(232, 251, 255, 1)
-                      ],
-                      begin: Alignment.bottomLeft,
-                      end: Alignment.topRight,
-                    )),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Text("MEET YOUR DOCTORS",
-                        style: TextStyle(fontSize: 16)),
-                    IconButton(
-                        onPressed: () {},
-                        icon: const Icon(
-                          Icons.chevron_right,
-                          size: 40,
-                          color: Color.fromRGBO(126, 115, 246, 1),
-                        ))
-                  ],
+              InkWell(
+                onTap: () {
+                  print("Cycle");
+                },
+                child: Container(
+                  padding: const EdgeInsets.only(
+                      top: 10, left: 20, bottom: 10, right: 20),
+                  margin: const EdgeInsets.only(
+                      top: 20, left: 20, bottom: 10, right: 20),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      gradient: const LinearGradient(
+                        colors: [
+                          Color.fromRGBO(46, 30, 253, 0.22),
+                          Color.fromRGBO(232, 251, 255, 1)
+                        ],
+                        begin: Alignment.bottomLeft,
+                        end: Alignment.topRight,
+                      )),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text("MEET YOUR DOCTORS",
+                          style: TextStyle(fontSize: 16)),
+                      IconButton(
+                          onPressed: () {},
+                          icon: const Icon(
+                            Icons.chevron_right,
+                            size: 40,
+                            color: Color.fromRGBO(126, 115, 246, 1),
+                          ))
+                    ],
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
+      bottomNavigationBar: BottomAppBar(
+        color:  const Color.fromRGBO(237, 255, 242, 1),
+        child: Container(
+          margin: const EdgeInsets.only(top: 20,bottom: 20,left: 20,right: 20),
+          height: 50.0,
+          width: double.maxFinite,
+          decoration: BoxDecoration(
+            color: const Color.fromRGBO(191, 234, 212, 1),
+            borderRadius: BorderRadius.circular(100),
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.notification_important),
-            label: 'Notification',
+          child: Row(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              // ignore: prefer_const_constructors
+              IconButton(
+                icon: const Icon(Icons.home),
+                onPressed: () {
+                  Get.to(const Dashboard());
+                },
+              ),
+              // ignore: prefer_const_constructors
+              IconButton(
+                icon: const Icon(Icons.notification_important),
+                onPressed: () {
+                  Get.to(const NotificationScreen());
+                },
+              ),
+
+              IconButton(
+                icon: const Icon(Icons.person),
+                onPressed: () {
+                  Get.to(const ProfileScreen());
+                },
+              ),
+            ],
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.help),
-            label: 'Help',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
-          ),
-        ],
-        // currentIndex: _selectedIndex,
-        unselectedItemColor: Colors.teal,
-        selectedItemColor: Colors.blue[900],
-        backgroundColor: const Color.fromRGBO(237, 255, 242, 1),
-        // onTap: _onItemTapped,
+        ),
       ),
     );
   }

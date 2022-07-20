@@ -6,6 +6,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 // import 'home.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:liria/dashboard.dart';
 import 'package:liria/health.dart';
 import 'package:liria/home.dart';
 import 'package:liria/tracker.dart';
@@ -27,6 +28,7 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Center(
+
       child: Stack(
         children: [
           Image(
@@ -47,6 +49,7 @@ class _LoginScreenState extends State<LoginScreen> {
           )),
           Align(
               alignment: const Alignment(0, 0),
+            child: SingleChildScrollView(
               child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -177,7 +180,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           //   final user = await _auth.signInWithEmailAndPassword(
                           //       email: email, password: password);
                           //   if (user != null) {
-                              Get.to(const HomeScreen());
+                              Get.offAll(const Dashboard());
                           //   }
                           // } catch (e) {
                           //   print(e);
@@ -196,7 +199,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             decoration: BoxDecoration(
                                 color: const Color.fromRGBO(19, 61, 28, 1),
                                 borderRadius: BorderRadius.circular(20))))
-                  ]))
+                  ])),),
         ],
       ),
     ));

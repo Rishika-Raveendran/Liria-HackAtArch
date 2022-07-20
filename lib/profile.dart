@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'components/profileFields.dart';
+import 'dashboard.dart';
+import 'notifications.dart';
 
 class ProfileScreen extends StatefulWidget {
   static const String id = '/profile';
@@ -45,6 +49,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         ),
       ),
       body: Center(
+    child: SingleChildScrollView(
           // ignore: avoid_unnecessary_containers
           child: Container(
               child: Column(
@@ -60,7 +65,46 @@ class _ProfileScreenState extends State<ProfileScreen> {
           getContainer("Email : abc@example.com", context),
           getContainer("Phone : +91 9557824001", context),
         ],
-      ))),
+      ))),),
+      bottomNavigationBar: BottomAppBar(
+        color:  const Color.fromRGBO(237, 255, 242, 1),
+        child: Container(
+          margin: const EdgeInsets.only(top: 20,bottom: 20,left: 20,right: 20),
+          height: 50.0,
+          width: double.maxFinite,
+          decoration: BoxDecoration(
+            color: const Color.fromRGBO(191, 234, 212, 1),
+            borderRadius: BorderRadius.circular(100),
+          ),
+          child: Row(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              // ignore: prefer_const_constructors
+              IconButton(
+                icon: const Icon(Icons.home),
+                onPressed: () {
+                  Get.to(const Dashboard());
+                },
+              ),
+              // ignore: prefer_const_constructors
+              IconButton(
+                icon: const Icon(Icons.notification_important),
+                onPressed: () {
+                  Get.to(const NotificationScreen());
+                },
+              ),
+
+              IconButton(
+                icon: const Icon(Icons.person),
+                onPressed: () {
+                  Get.to(const ProfileScreen());
+                },
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
