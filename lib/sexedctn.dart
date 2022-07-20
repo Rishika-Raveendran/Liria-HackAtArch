@@ -5,6 +5,7 @@ import 'package:liria/profile.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 import 'dashboard.dart';
+import 'maps.dart';
 import 'notifications.dart';
 
 class SexEdScreen extends StatefulWidget {
@@ -67,104 +68,119 @@ class _SexEdScreenState extends State<SexEdScreen> {
         ),
       ),
       body: Center(
-      child: SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            // ignore: avoid_unnecessary_containers
-            Container(
-              child: YoutubePlayer(
-                controller: _controller,
-                liveUIColor: Colors.amber,
-              ),
-            ),
-            // ignore: prefer_const_constructors
-            Container(
-              margin: const EdgeInsets.only(
-                  top: 20, bottom: 15, left: 20, right: 20),
-              child: const Text(
-                  "Sex education is high quality teaching and learning about a broad variety of topics related to sex and sexuality. It explores values and beliefs about those topics and helps people gain the skills that are needed to navigate relationships with self, partners, and community, and manage one’s own sexual health."),
-            ),
-            Container(
-              margin: const EdgeInsets.only(
-                  top: 20, bottom: 15, left: 20, right: 20),
-              child: const Text(
-                  "More related videos.."),
-            ),
-            Container(
-              child: YoutubePlayer(
-                controller: _controller1,
-                liveUIColor: Colors.amber,
-              ),
-            ),
-
-
-            InkWell(
-              onTap: () {
-                print("Cycle");
-              },
-              child: Container(
-                padding: const EdgeInsets.only(
-                    top: 10, left: 20, bottom: 10, right: 20),
-                margin: const EdgeInsets.only(
-                    top: 20, left: 20, bottom: 10, right: 20),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    gradient: const LinearGradient(
-                      colors: [
-                        Color.fromRGBO(46, 30, 253, 0.22),
-                        Color.fromRGBO(232, 251, 255, 1)
-                      ],
-                      begin: Alignment.bottomLeft,
-                      end: Alignment.topRight,
-                    )),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Text("QUERIES", style: TextStyle(fontSize: 16)),
-                    IconButton(
-                        onPressed: () {},
-                        icon: const Icon(
-                          Icons.chevron_right,
-                          size: 40,
-                          color: Color.fromRGBO(126, 115, 246, 1),
-                        ))
-                  ],
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              // ignore: avoid_unnecessary_containers
+              Container(
+                child: YoutubePlayer(
+                  controller: _controller,
+                  liveUIColor: Colors.amber,
                 ),
               ),
-            ),
-            InkWell(
-              onTap: () {
-                print("Cycle");
-              },
-              child: Container(
-                padding: const EdgeInsets.only(
-                    top: 10, left: 20, bottom: 10, right: 20),
+              // ignore: prefer_const_constructors
+              Container(
                 margin: const EdgeInsets.only(
-                    top: 20, left: 20, bottom: 10, right: 20),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    gradient: const LinearGradient(
-                      colors: [
-                        Color.fromRGBO(46, 30, 253, 0.22),
-                        Color.fromRGBO(232, 251, 255, 1)
-                      ],
-                      begin: Alignment.bottomLeft,
-                      end: Alignment.topRight,
-                    )),
+                    top: 20, bottom: 15, left: 20, right: 20),
+                child: const Text(
+                    "Sex education is high quality teaching and learning about a broad variety of topics related to sex and sexuality. It explores values and beliefs about those topics and helps people gain the skills that are needed to navigate relationships with self, partners, and community, and manage one’s own sexual health."),
               ),
-            ),
-          ],
+              Container(
+                margin: const EdgeInsets.only(
+                    top: 20, bottom: 15, left: 20, right: 20),
+                child: const Text("More related videos.."),
+              ),
+              Container(
+                child: YoutubePlayer(
+                  controller: _controller1,
+                  liveUIColor: Colors.amber,
+                ),
+              ),
+
+              InkWell(
+                onTap: () {
+                  print("Cycle");
+                },
+                child: Container(
+                  padding: const EdgeInsets.only(
+                      top: 10, left: 20, bottom: 10, right: 20),
+                  margin: const EdgeInsets.only(
+                      top: 20, left: 20, bottom: 10, right: 20),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      gradient: const LinearGradient(
+                        colors: [
+                          Color.fromRGBO(46, 30, 253, 0.22),
+                          Color.fromRGBO(232, 251, 255, 1)
+                        ],
+                        begin: Alignment.bottomLeft,
+                        end: Alignment.topRight,
+                      )),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text("QUERIES", style: TextStyle(fontSize: 16)),
+                      IconButton(
+                          onPressed: () {},
+                          icon: const Icon(
+                            Icons.chevron_right,
+                            size: 40,
+                            color: Color.fromRGBO(126, 115, 246, 1),
+                          ))
+                    ],
+                  ),
+                ),
+              ),
+              InkWell(
+                onTap: () {
+                  Get.to(const FindDoctors());
+                },
+                child: Container(
+                  padding: const EdgeInsets.only(
+                      top: 10, left: 20, bottom: 10, right: 20),
+                  margin: const EdgeInsets.only(
+                      top: 20, left: 20, bottom: 10, right: 20),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      gradient: const LinearGradient(
+                        colors: [
+                          Color.fromRGBO(46, 30, 253, 0.22),
+                          Color.fromRGBO(232, 251, 255, 1)
+                        ],
+                        begin: Alignment.bottomLeft,
+                        end: Alignment.topRight,
+                      )),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text("MEET YOUR DOCTORS",
+                          style: TextStyle(fontSize: 16)),
+                      IconButton(
+                          onPressed: () {
+                            // Get.to(const FindDoctors());
+                          },
+                          icon: const Icon(
+                            Icons.chevron_right,
+                            size: 40,
+                            color: Color.fromRGBO(126, 115, 246, 1),
+                          ))
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
-      ),
-
       bottomNavigationBar: BottomAppBar(
-        color:  const Color.fromRGBO(237, 255, 242, 1),
+        color: const Color.fromRGBO(237, 255, 242, 1),
         child: Container(
-          margin: const EdgeInsets.only(top: 20,bottom: 20,left: 20,right: 20),
+          margin:
+              const EdgeInsets.only(top: 20, bottom: 20, left: 20, right: 20),
           height: 50.0,
           width: double.maxFinite,
           decoration: BoxDecoration(
