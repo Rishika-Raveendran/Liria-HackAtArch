@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:liria/blog.dart';
-import 'package:liria/detail_page.dart';
+
 import 'package:liria/double_tap.dart';
 import 'package:liria/health.dart';
-import 'package:liria/main_content.dart';
+
 import 'package:liria/notifications.dart';
 import 'package:liria/profile.dart';
 

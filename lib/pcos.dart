@@ -50,121 +50,121 @@ class _PCOSScreenState extends State<PCOSScreen> {
         ),
       ),
       body: Center(
-      child: SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            // ignore: avoid_unnecessary_containers
-            Container(
-              child: YoutubePlayer(
-                controller: _controller,
-                liveUIColor: Colors.amber,
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              // ignore: avoid_unnecessary_containers
+              Container(
+                child: YoutubePlayer(
+                  controller: _controller,
+                  liveUIColor: Colors.amber,
+                ),
               ),
-            ),
-            // ignore: prefer_const_constructors
-            Container(
-              margin: const EdgeInsets.only(
-                  top: 20, bottom: 15, left: 20, right: 20),
-              child: const Text(
-                  "Polycystic ovary syndrome (PCOS) is a hormonal disorder common among women of reproductive age. Women with PCOS may have infrequent or prolonged menstrual periods or excess male hormone (androgen) levels."),
-            ),
-
-            const Align(
-              alignment: Alignment(-0.7, 0),
-              child: Text('SYMPTOMS',
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-            ),
-            Container(
-              margin: const EdgeInsets.only(
-                  top: 20, bottom: 15, left: 20, right: 20),
-              child: const Text("Irregular periods"),
-            ),
-            Container(
-              margin: const EdgeInsets.only(
-                  top: 20, bottom: 15, left: 20, right: 20),
-              child: const Text("Excess androgen"),
-            ),
-            Container(
+              // ignore: prefer_const_constructors
+              Container(
                 margin: const EdgeInsets.only(
                     top: 20, bottom: 15, left: 20, right: 20),
-                child: const Text("Polycystic ovaries")),
+                child: const Text(
+                    "Polycystic ovary syndrome (PCOS) is a hormonal disorder common among women of reproductive age. Women with PCOS may have infrequent or prolonged menstrual periods or excess male hormone (androgen) levels."),
+              ),
 
-            InkWell(
-              onTap: () {
-                print("Cycle");
-                Get.to(const PCOSForumDetailPage());
-              },
-              child: Container(
-                padding: const EdgeInsets.only(
-                    top: 10, left: 20, bottom: 10, right: 20),
+              const Align(
+                alignment: Alignment(-0.7, 0),
+                child: Text('SYMPTOMS',
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+              ),
+              Container(
                 margin: const EdgeInsets.only(
-                    top: 20, left: 20, bottom: 10, right: 20),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    gradient: const LinearGradient(
-                      colors: [
-                        Color.fromRGBO(46, 30, 253, 0.22),
-                        Color.fromRGBO(232, 251, 255, 1)
-                      ],
-                      begin: Alignment.bottomLeft,
-                      end: Alignment.topRight,
-                    )),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Text("QUERIES", style: TextStyle(fontSize: 16)),
-                    IconButton(
-                        onPressed: () {},
-                        icon: const Icon(
-                          Icons.chevron_right,
-                          size: 40,
-                          color: Color.fromRGBO(126, 115, 246, 1),
-                        ))
-                  ],
+                    top: 20, bottom: 15, left: 20, right: 20),
+                child: const Text("Irregular periods"),
+              ),
+              Container(
+                margin: const EdgeInsets.only(
+                    top: 20, bottom: 15, left: 20, right: 20),
+                child: const Text("Excess androgen"),
+              ),
+              Container(
+                  margin: const EdgeInsets.only(
+                      top: 20, bottom: 15, left: 20, right: 20),
+                  child: const Text("Polycystic ovaries")),
+
+              InkWell(
+                onTap: () {
+                  print("Cycle");
+                  Get.to(const PCOSForumDetailPage());
+                },
+                child: Container(
+                  padding: const EdgeInsets.only(
+                      top: 10, left: 20, bottom: 10, right: 20),
+                  margin: const EdgeInsets.only(
+                      top: 20, left: 20, bottom: 10, right: 20),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      gradient: const LinearGradient(
+                        colors: [
+                          Color.fromRGBO(46, 30, 253, 0.22),
+                          Color.fromRGBO(232, 251, 255, 1)
+                        ],
+                        begin: Alignment.bottomLeft,
+                        end: Alignment.topRight,
+                      )),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text("QUERIES", style: TextStyle(fontSize: 16)),
+                      IconButton(
+                          onPressed: () {},
+                          icon: const Icon(
+                            Icons.chevron_right,
+                            size: 40,
+                            color: Color.fromRGBO(126, 115, 246, 1),
+                          ))
+                    ],
+                  ),
                 ),
               ),
-            ),
-            InkWell(
-              onTap: () {
-                print("Cycle");
-              },
-              child: Container(
-                padding: const EdgeInsets.only(
-                    top: 10, left: 20, bottom: 10, right: 20),
-                margin: const EdgeInsets.only(
-                    top: 20, left: 20, bottom: 10, right: 20),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    gradient: const LinearGradient(
-                      colors: [
-                        Color.fromRGBO(46, 30, 253, 0.22),
-                        Color.fromRGBO(232, 251, 255, 1)
-                      ],
-                      begin: Alignment.bottomLeft,
-                      end: Alignment.topRight,
-                    )),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Text("MEET YOUR DOCTORS",
-                        style: TextStyle(fontSize: 16)),
-                    IconButton(
-                        onPressed: () {},
-                        icon: const Icon(
-                          Icons.chevron_right,
-                          size: 40,
-                          color: Color.fromRGBO(126, 115, 246, 1),
-                        ))
-                  ],
+              InkWell(
+                onTap: () {
+                  print("Cycle");
+                },
+                child: Container(
+                  padding: const EdgeInsets.only(
+                      top: 10, left: 20, bottom: 10, right: 20),
+                  margin: const EdgeInsets.only(
+                      top: 20, left: 20, bottom: 10, right: 20),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      gradient: const LinearGradient(
+                        colors: [
+                          Color.fromRGBO(46, 30, 253, 0.22),
+                          Color.fromRGBO(232, 251, 255, 1)
+                        ],
+                        begin: Alignment.bottomLeft,
+                        end: Alignment.topRight,
+                      )),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text("MEET YOUR DOCTORS",
+                          style: TextStyle(fontSize: 16)),
+                      IconButton(
+                          onPressed: () {},
+                          icon: const Icon(
+                            Icons.chevron_right,
+                            size: 40,
+                            color: Color.fromRGBO(126, 115, 246, 1),
+                          ))
+                    ],
+                  ),
                 ),
               ),
-            ),
-          ],
-        ),
-      ),),
+            ],
+          ),
+        ),),
       bottomNavigationBar: BottomAppBar(
         color:  const Color.fromRGBO(237, 255, 242, 1),
         child: Container(

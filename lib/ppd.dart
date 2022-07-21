@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:liria/blog.dart';
 import 'package:liria/dashboard.dart';
+import 'package:liria/maps.dart';
 import 'package:liria/notifications.dart';
 import 'package:liria/profile.dart';
 import 'package:liria/queriesPPD.dart';
@@ -129,7 +130,7 @@ class _PPDScreenState extends State<PPDScreen> {
               ),
               InkWell(
                 onTap: () {
-                  print("Cycle");
+                  Get.to(const FindDoctors());
                 },
                 child: Container(
                   padding: const EdgeInsets.only(
@@ -153,7 +154,9 @@ class _PPDScreenState extends State<PPDScreen> {
                       const Text("MEET YOUR DOCTORS",
                           style: TextStyle(fontSize: 16)),
                       IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            // Get.to(const FindDoctors());
+                          },
                           icon: const Icon(
                             Icons.chevron_right,
                             size: 40,

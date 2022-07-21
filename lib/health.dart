@@ -11,7 +11,7 @@ import 'package:liria/sexedctn.dart';
 import 'package:liria/tracker.dart';
 
 import 'dashboard.dart';
-import 'forums.dart';
+
 import 'notifications.dart';
 
 

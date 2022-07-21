@@ -56,7 +56,7 @@ class _SEXEDTNForumDetailPageState extends State<SEXEDTNForumDetailPage> {
             IconButton(
               onPressed: () => Navigator.pop(context),
               icon: const Icon(Icons.arrow_back,
-                  color: Color.fromRGBO(161, 218, 167, 1)),
+                  color: Color.fromRGBO(161, 218, 167, 1.0)),
             ),
             const Text('QUERIES(SEX EDUCATION)',
                 style: TextStyle(fontSize: 16, color: Colors.black)),
