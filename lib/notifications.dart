@@ -57,7 +57,6 @@ class _NotificationScreenState extends State<NotificationScreen> {
     return Scaffold(
         backgroundColor: const Color.fromRGBO(237, 255, 242, 1),
         body: Center(
-        child: SingleChildScrollView(
           child: Container(
               padding: EdgeInsets.only(
                   bottom: 20,
@@ -71,6 +70,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                         style: TextStyle(
                             fontSize: 18, fontWeight: FontWeight.bold)),
                     Expanded(
+
                       //padding: EdgeInsets.all(20),
                       child: ListView.builder(
                           itemCount: notifs.length,
@@ -113,7 +113,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                                 ));
                           }),
                     )
-                  ])),
+                  ]),
         ),),
       bottomNavigationBar: BottomAppBar(
         color:  const Color.fromRGBO(237, 255, 242, 1),

@@ -4,20 +4,21 @@ import 'package:liria/blog.dart';
 import 'package:liria/dashboard.dart';
 import 'package:liria/notifications.dart';
 import 'package:liria/profile.dart';
+import 'package:liria/queriesIRREG.dart';
 import 'package:liria/queriesPPD.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-class PPDScreen extends StatefulWidget {
-  const PPDScreen({Key? key}) : super(key: key);
+class IRREGScreen extends StatefulWidget {
+  const IRREGScreen({Key? key}) : super(key: key);
 
   @override
-  State<PPDScreen> createState() => _PPDScreenState();
+  State<IRREGScreen> createState() => _IRREGScreenState();
 }
 
-class _PPDScreenState extends State<PPDScreen> {
+class _IRREGScreenState extends State<IRREGScreen> {
   final YoutubePlayerController _controller = YoutubePlayerController(
     initialVideoId: YoutubePlayer.convertUrlToId(
-        "https://www.youtube.com/watch?v=6kaCdrvNGZw")!,
+        "https://www.youtube.com/watch?v=bkoqKWZtB_0&ab_channel=Maitri")!,
     flags: const YoutubePlayerFlags(
       autoPlay: true,
       mute: true,
@@ -41,7 +42,7 @@ class _PPDScreenState extends State<PPDScreen> {
               icon: const Icon(Icons.arrow_back,
                   color: Color.fromRGBO(161, 218, 167, 1)),
             ),
-            const Text('POSTPARTUM DEPRESSION',
+            const Text('MENSTRUAL IRREGULARITIES',
                 style: TextStyle(fontSize: 16, color: Colors.black)),
 
             // Your widgets here
@@ -66,35 +67,26 @@ class _PPDScreenState extends State<PPDScreen> {
                 margin: const EdgeInsets.only(
                     top: 20, bottom: 15, left: 20, right: 20),
                 child: const Text(
-                    "Postpartum depression (PPD) is a complex mix of physical, emotional, and behavioral changes that happen in some women after giving birth."),
+                    "For most women, a normal menstrual cycle ranges from 21 to 35 days.1 However, 14% to 25% of women have irregular menstrual cycles, meaning the cycles are shorter or longer than normal; are heavier or lighter than normal; or are experienced with other problems, like abdominal cramps.2 Irregular cycles can be ovulatory, meaning that ovulation occurs, or anovulatory, meaning ovulation does not occur.\n "),
               ),
 
               const Align(
                 alignment: Alignment(-0.7, 0),
-                child: Text('SYMPTOMS',
+                child: Text('CAUSES',
                     style:
-                        TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                    TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
               ),
-              Container(
-                margin: const EdgeInsets.only(
-                    top: 20, bottom: 15, left: 20, right: 20),
-                child: const Text("Severe fatigue"),
-              ),
-              Container(
-                margin: const EdgeInsets.only(
-                    top: 20, bottom: 15, left: 20, right: 20),
-                child: const Text("Frequent Mood Changes"),
-              ),
+
               Container(
                   margin: const EdgeInsets.only(
                       top: 20, bottom: 15, left: 20, right: 20),
-                  child: const Text("Trouble sleeping")),
+                  child: const Text("Stress and lifestyle factors\n\nBirth control pills\n\nUterine polyps or fibroids\n\nEndometriosis\n\nPelvic inflammatory disease\n\nPolycystic ovary syndrome")),
 
               InkWell(
                 onTap: () {
                   print("Cycle");
-                  print("PPD");
-                  Get.to(const PPDForumDetailPage());
+                  print("IRREG");
+                  Get.to(const IRREGForumDetailPage());
                 },
                 child: Container(
                   padding: const EdgeInsets.only(
@@ -171,7 +163,7 @@ class _PPDScreenState extends State<PPDScreen> {
         color: const Color.fromRGBO(237, 255, 242, 1),
         child: Container(
           margin:
-              const EdgeInsets.only(top: 20, bottom: 20, left: 20, right: 20),
+          const EdgeInsets.only(top: 20, bottom: 20, left: 20, right: 20),
           height: 50.0,
           width: double.maxFinite,
           decoration: BoxDecoration(

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:liria/profile.dart';
+import 'package:liria/queriesPCOS.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 import 'dashboard.dart';
@@ -92,6 +93,7 @@ class _PCOSScreenState extends State<PCOSScreen> {
             InkWell(
               onTap: () {
                 print("Cycle");
+                Get.to(const PCOSForumDetailPage());
               },
               child: Container(
                 padding: const EdgeInsets.only(

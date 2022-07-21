@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:liria/blog.dart';
+import 'package:liria/detail_page.dart';
 import 'package:liria/double_tap.dart';
 import 'package:liria/health.dart';
+import 'package:liria/main_content.dart';
 import 'package:liria/notifications.dart';
 import 'package:liria/profile.dart';
 
@@ -92,7 +94,7 @@ class _DashboardState extends State<Dashboard> {
                                 Container(
                                   child: IconButton(
                                       onPressed: () {
-                                        Get.to(Health());
+                                        Get.to(const Health());
                                       },
                                       icon: const Icon(
                                         Icons.health_and_safety,
@@ -133,7 +135,7 @@ class _DashboardState extends State<Dashboard> {
                                 Container(
                                   child: IconButton(
                                       onPressed: () {
-                                        Get.to(const DiscussionForum());
+                                        Get.to(const BlogPage());
                                       },
                                       icon: const Icon(
                                         Icons.forum,

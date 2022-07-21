@@ -159,12 +159,12 @@ class _LoginScreenState extends State<LoginScreen> {
                           final user = await _auth.signInWithEmailAndPassword(
                               email: email, password: password);
                           if (user != null) {
-                            Get.to(const HomeScreen());
+                            Get.offAll(const Dashboard());
                           }
                         } catch (e) {
-                          print(e);
-                        }
-                      },
+                           print(e);
+                         }
+                       },
                       child: Container(
                           width: 270,
                           height: 50,

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:liria/profile.dart';
+import 'package:liria/queriesSEXEDTN.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 import 'dashboard.dart';
@@ -103,6 +104,7 @@ class _SexEdScreenState extends State<SexEdScreen> {
             InkWell(
               onTap: () {
                 print("Cycle");
+                Get.to(const SEXEDTNForumDetailPage());
               },
               child: Container(
                 padding: const EdgeInsets.only(
@@ -154,6 +156,21 @@ class _SexEdScreenState extends State<SexEdScreen> {
                       begin: Alignment.bottomLeft,
                       end: Alignment.topRight,
                     )),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text("MEET YOUR DOCTORS",
+                        style: TextStyle(fontSize: 16)),
+                    IconButton(
+                        onPressed: () {},
+                        icon: const Icon(
+                          Icons.chevron_right,
+                          size: 40,
+                          color: Color.fromRGBO(126, 115, 246, 1),
+                        ))
+                  ],
+                ),
               ),
             ),
           ],

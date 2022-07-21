@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:liria/irreg.dart';
 import 'package:liria/ppd.dart';
 
 import 'package:liria/pcos.dart';
@@ -10,6 +11,7 @@ import 'package:liria/sexedctn.dart';
 import 'package:liria/tracker.dart';
 
 import 'dashboard.dart';
+import 'forums.dart';
 import 'notifications.dart';
 
 
@@ -156,10 +158,10 @@ class _HealthState extends State<Health> {
                         Text("SEX EDUCATION", style: TextStyle(fontSize: 16)),
                       ])),
             ),
-            InkWell(
+             InkWell(
               onTap: () {
                 // print("PPD");
-                // Get.to(const Groups());
+                 Get.to(const IRREGScreen());
               },
               child: Container(
                   padding: const EdgeInsets.only(
@@ -173,7 +175,7 @@ class _HealthState extends State<Health> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
-                        Text("GYNAEC ISSUES", style: TextStyle(fontSize: 16)),
+                        Text("MENSTRUAL IRREGULARITIES", style: TextStyle(fontSize: 16)),
                       ])),
             ),
           ],
